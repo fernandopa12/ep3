@@ -20,7 +20,7 @@
     <div class="blob" style="width:380px;height:380px;bottom:-110px;left:-70px;background:#457b9d"></div>
   </div>
   <div class="title-bar"></div>
-  <div class="slide-footer"><span>SIN5032 — Experimentação em ML Supervisionado · USP · 2026</span><span>Fernando Pinéo de Abreu</span></div>
+  <div class="slide-footer"><span>SIN5032 — Experimentação em AM Supervisionado · USP · 2026</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content" style="padding-left:clamp(2.4rem,5vw,4.5rem)">
     <p class="section-tag reveal">Congresso Interno da Disciplina · CID-EAMS25</p>
     <h1 class="font-display reveal" style="font-size:clamp(1.9rem,4vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:.5rem">
@@ -82,49 +82,18 @@
       <div>
         <p class="reveal" style="font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#457b9d;border-bottom:2px solid #457b9d;padding-bottom:3px;margin-bottom:.5rem">Protocolo</p>
         <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:7px">
-          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· Comparação de hipóteses sob o mesmo protocolo de reamostragem</li>
-          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· StratifiedKFold 10 folds (seed=42), com os mesmos folds para todos os modelos (pareamento)</li>
-          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· MinMaxScaler apenas em SVM e KNN · Métricas: F1-score e AUC-ROC</li>
-          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· Wilcoxon pareado + Bonferroni (α = <span style="color:#e63946;font-weight:700">0,0083</span>)</li>
+          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· StratifiedKFold 10 folds, seed=42</li>
+          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· MinMaxScaler apenas em SVM e KNN</li>
+          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· Métricas: F1-score e AUC-ROC</li>
+          <li class="reveal" style="font-size:.82rem;color:#3d3a35">· Wilcoxon + Bonferroni (α = <span style="color:#e63946;font-weight:700">0,0083</span>)</li>
         </ul>
       </div>
     </div>
-    <div class="reveal" style="margin-top:.7rem;font-size:.74rem;color:#7a7570;padding:.55rem .75rem;border:1px dashed rgba(0,0,0,.13);border-radius:6px;line-height:1.4">
-      Objetivo da validação: estimar o erro fora da amostra; a escolha de modelos e hiperparâmetros no mesmo processo pode introduzir viés otimista leve.
-    </div>
   </div>
 </div>
 
-<!-- SLIDE 4 DESENHO EXPERIMENTAL -->
+<!-- SLIDE 4 GRÁFICO BARRAS -->
 <div class="slide slide-4" data-slide="4">
-  <div class="gradient-mesh"><div class="blob" style="width:340px;height:340px;top:-60px;right:-40px;background:#1d3557"></div></div>
-  <div class="slide-footer"><span>Desenho Experimental</span><span>Fernando Pinéo de Abreu</span></div>
-  <div class="content">
-    <p class="section-tag reveal">2.1 Desenho Experimental</p>
-    <h2 class="font-display reveal" style="font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600;margin-bottom:.55rem">Condições, Fatores e Controle Experimental</h2>
-    <hr class="rule-thin reveal" style="margin-bottom:.75rem">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:start">
-      <div class="sci-card reveal" style="border-left:3px solid #1d3557">
-        <p style="font-size:.8rem;font-weight:700;color:#1d3557;margin-bottom:4px">Condições testadas</p>
-        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">RF, SVM, KNN e AD avaliados no mesmo conjunto TUANDROMD, com F1-score e AUC-ROC como resposta experimental.</p>
-      </div>
-      <div class="sci-card reveal" style="border-left:3px solid #457b9d">
-        <p style="font-size:.8rem;font-weight:700;color:#457b9d;margin-bottom:4px">Fatores manipulados</p>
-        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">Hipótese/modelo de classificação e pré-processamento específico (MinMaxScaler apenas para SVM/KNN).</p>
-      </div>
-      <div class="sci-card reveal" style="border-left:3px solid #e63946">
-        <p style="font-size:.8rem;font-weight:700;color:#e63946;margin-bottom:4px">Constantes e bloqueio</p>
-        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">Mesmos folds estratificados (pareamento), seed fixa, mesmas métricas e mesmo protocolo estatístico (Wilcoxon pareado + Bonferroni).</p>
-      </div>
-    </div>
-    <div class="reveal" style="margin-top:.7rem;font-size:.75rem;color:#7a7570;padding:.6rem .8rem;border:1px dashed rgba(0,0,0,.13);border-radius:6px;line-height:1.4">
-      Este desenho busca estimar erro fora da amostra com menor viés e menor dependência de uma partição específica.
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 5 GRÁFICO BARRAS -->
-<div class="slide slide-5" data-slide="5">
   <div class="gradient-mesh"><div class="blob" style="width:340px;height:340px;top:-60px;right:-40px;background:#1d3557"></div></div>
   <div class="slide-footer"><span>Resultados</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content">
@@ -153,8 +122,8 @@
   </div>
 </div>
 
-<!-- SLIDE 6 BOXPLOT -->
-<div class="slide slide-6" data-slide="6">
+<!-- SLIDE 5 BOXPLOT -->
+<div class="slide slide-5" data-slide="5">
   <div class="gradient-mesh"><div class="blob" style="width:340px;height:340px;bottom:-60px;left:-40px;background:#457b9d"></div></div>
   <div class="slide-footer"><span>Resultados — Estabilidade</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content">
@@ -175,15 +144,15 @@
           <p style="font-size:.76rem;color:#7a7570">Um fold distante revela sensibilidade à partição dos dados.</p>
         </div>
         <div class="reveal" style="font-size:.75rem;color:#7a7570;padding:.6rem .8rem;border:1px dashed rgba(0,0,0,.13);border-radius:6px;line-height:1.4">
-          A avaliação em 10 folds reduz a dependência de uma única partição; a variabilidade distingue RF dos demais.
+          A variabilidade distingue RF dos demais — não apenas a mediana.
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 7 HEATMAP + TABELA -->
-<div class="slide slide-7" data-slide="7">
+<!-- SLIDE 6 HEATMAP + TABELA -->
+<div class="slide slide-6" data-slide="6">
   <div class="gradient-mesh"><div class="blob" style="width:340px;height:340px;top:-60px;left:-40px;background:#1d3557"></div></div>
   <div class="slide-footer"><span>Comparação Estatística</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content">
@@ -207,15 +176,15 @@
           </tbody>
         </table>
         <div class="sci-card reveal" style="margin-top:10px;border-left:3px solid #1d3557">
-          <p style="font-size:.78rem;color:#3d3a35"><strong style="color:#1d3557">RF supera todos</strong> sob Wilcoxon pareado com Bonferroni; SVM, KNN e AD não se distinguem entre si neste protocolo.</p>
+          <p style="font-size:.78rem;color:#3d3a35"><strong style="color:#1d3557">RF supera todos</strong> com significância. SVM, KNN e AD não se distinguem entre si.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 8 CONCLUSÃO -->
-<div class="slide slide-8" data-slide="8">
+<!-- SLIDE 7 CONCLUSÃO -->
+<div class="slide slide-7" data-slide="7">
   <div class="gradient-mesh">
     <div class="blob" style="width:500px;height:500px;top:-130px;right:-110px;background:#1d3557"></div>
     <div class="blob" style="width:360px;height:360px;bottom:-90px;left:-60px;background:#457b9d"></div>
@@ -227,22 +196,19 @@
     <h2 class="font-display reveal" style="font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:600;margin-bottom:.55rem">Síntese</h2>
     <hr class="rule reveal" style="max-width:400px;margin-left:0;margin-bottom:.9rem">
     <div class="reveal" style="border-left:4px solid #1d3557;padding:.85rem 1.2rem;background:rgba(29,53,87,.04);border-radius:0 8px 8px 0;margin-bottom:1rem;max-width:740px">
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.5;color:#1a1714">O <strong>Random Forest</strong> obteve F1 = 0,9969 e AUC = 0,9995, com superioridade sob Wilcoxon pareado com Bonferroni (p ≤ 0,004) no protocolo avaliado.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,1.7vw,1.2rem);line-height:1.5;color:#1a1714">O <strong>Random Forest</strong> obteve F1 = 0,9969 e AUC = 0,9995, com superioridade estatisticamente significativa sobre todos os demais após correção de Bonferroni (p ≤ 0,004).</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px" class="reveal">
       <div class="sci-card" style="text-align:center"><div style="font-size:1.65rem;font-weight:700;color:#1d3557;font-family:'Cormorant Garamond',serif">4/6</div><p style="font-size:.71rem;color:#7a7570">pares com diferença significativa</p></div>
       <div class="sci-card" style="text-align:center;border-left:3px solid #e63946"><div style="font-size:1.65rem;font-weight:700;color:#e63946;font-family:'Cormorant Garamond',serif">Cautela</div><p style="font-size:.71rem;color:#7a7570">3.802 duplicatas podem inflar métricas</p></div>
       <div class="sci-card" style="text-align:center;border-left:3px solid #457b9d"><div style="font-size:1.65rem;font-weight:700;color:#457b9d;font-family:'Cormorant Garamond',serif">Próximos</div><p style="font-size:.71rem;color:#7a7570">Grid search + SMOTE + datasets independentes</p></div>
     </div>
-    <p class="reveal" style="margin-top:.7rem;font-size:.75rem;color:#7a7570;max-width:760px;line-height:1.4">
-      F1 e AUC devem ser interpretados como estimativas do erro fora da amostra, sujeitas à variância amostral; devido às duplicatas e ao desbalanceamento, mantemos cautela na generalização.
-    </p>
   </div>
 </div>
 
 </div>
-<!-- SLIDE 9 ENCERRAMENTO -->
-<div class="slide slide-9" data-slide="9">
+<!-- SLIDE 8 ENCERRAMENTO -->
+<div class="slide slide-8" data-slide="8">
   <div class="gradient-mesh">
     <div class="blob" style="width:520px;height:520px;top:-150px;right:-120px;background:#1d3557"></div>
     <div class="blob" style="width:380px;height:380px;bottom:-100px;left:-70px;background:#457b9d"></div>
@@ -264,7 +230,7 @@
   <button class="nav-btn" onclick="changeSlide(-1)">&#8249;</button>
   <div class="slide-dots" id="dots"></div>
   <button class="nav-btn" onclick="changeSlide(1)">&#8250;</button>
-  <span class="slide-counter" id="counter">1 / 9</span>
+  <span class="slide-counter" id="counter">1 / 8</span>
 </div>
 <script src="assets/js/slides.js"></script>
 </body>
