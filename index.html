@@ -269,8 +269,37 @@
   </div>
 </div>
 
-<!-- SLIDE 10 CONCLUSÃO -->
+<!-- SLIDE 10 LIMITAÇÕES -->
 <div class="slide slide-10" data-slide="10">
+  <div class="gradient-mesh"><div class="blob" style="width:340px;height:340px;bottom:-60px;left:-40px;background:#457b9d"></div></div>
+  <div class="slide-footer"><span>Limitações do Experimento</span><span>Fernando Pinéo de Abreu</span></div>
+  <div class="content">
+    <p class="section-tag reveal">5. Limitações</p>
+    <h2 class="font-display reveal" style="font-size:clamp(1.55rem,2.8vw,2.2rem);font-weight:600;margin-bottom:.55rem">Ameaças à validade dos resultados</h2>
+    <hr class="rule-thin reveal" style="margin-bottom:.75rem">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start">
+      <div class="sci-card reveal" style="border-left:3px solid #e63946">
+        <p style="font-size:.8rem;font-weight:700;color:#e63946;margin-bottom:4px">Muitas duplicatas no dataset</p>
+        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">3.802 de 4.464 instâncias são duplicadas, podendo inflar F1/AUC e reduzir a variabilidade observada.</p>
+      </div>
+      <div class="sci-card reveal" style="border-left:3px solid #1d3557">
+        <p style="font-size:.8rem;font-weight:700;color:#1d3557;margin-bottom:4px">Desbalanceamento de classes</p>
+        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">Com 79,8% de malware, os modelos podem favorecer a classe majoritária sem refletir cenários reais.</p>
+      </div>
+      <div class="sci-card reveal" style="border-left:3px solid #457b9d">
+        <p style="font-size:.8rem;font-weight:700;color:#457b9d;margin-bottom:4px">Validação em base única</p>
+        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">Resultados obtidos apenas no TUANDROMD; a generalização para outros períodos e famílias é limitada.</p>
+      </div>
+      <div class="sci-card reveal" style="border-left:3px solid #1d3557">
+        <p style="font-size:.8rem;font-weight:700;color:#1d3557;margin-bottom:4px">Sem otimização extensa</p>
+        <p style="font-size:.76rem;color:#7a7570;line-height:1.4">Comparação focou configurações padrão; ajustes de hiperparâmetros e nested CV podem alterar o ranking.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11 CONCLUSÃO -->
+<div class="slide slide-11" data-slide="11">
   <div class="gradient-mesh">
     <div class="blob" style="width:500px;height:500px;top:-130px;right:-110px;background:#1d3557"></div>
     <div class="blob" style="width:360px;height:360px;bottom:-90px;left:-60px;background:#457b9d"></div>
@@ -278,7 +307,7 @@
   <div class="title-bar"></div>
   <div class="slide-footer"><span>Conclusão</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content" style="padding-left:clamp(2.4rem,5vw,4.5rem)">
-    <p class="section-tag reveal">5. Conclusão</p>
+    <p class="section-tag reveal">6. Conclusão</p>
     <h2 class="font-display reveal" style="font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:600;margin-bottom:.55rem">Síntese</h2>
     <hr class="rule reveal" style="max-width:400px;margin-left:0;margin-bottom:.9rem">
     <div class="reveal" style="border-left:4px solid #1d3557;padding:.85rem 1.2rem;background:rgba(29,53,87,.04);border-radius:0 8px 8px 0;margin-bottom:1rem;max-width:740px">
@@ -293,8 +322,8 @@
 </div>
 
 </div>
-<!-- SLIDE 11 ENCERRAMENTO -->
-<div class="slide slide-11" data-slide="11">
+<!-- SLIDE 12 ENCERRAMENTO -->
+<div class="slide slide-12" data-slide="12">
   <div class="gradient-mesh">
     <div class="blob" style="width:520px;height:520px;top:-150px;right:-120px;background:#1d3557"></div>
     <div class="blob" style="width:380px;height:380px;bottom:-100px;left:-70px;background:#457b9d"></div>
@@ -302,7 +331,7 @@
   <div class="title-bar"></div>
   <div class="slide-footer"><span>Encerramento</span><span>Fernando Pinéo de Abreu</span></div>
   <div class="content" style="padding-left:clamp(2.4rem,5vw,4.5rem);display:flex;flex-direction:column;justify-content:center;min-height:78vh">
-    <p class="section-tag reveal">6. Encerramento</p>
+    <p class="section-tag reveal">7. Encerramento</p>
     <h2 class="font-display reveal" style="font-size:clamp(2.2rem,4.2vw,3.5rem);font-weight:600;line-height:1.15;margin-bottom:.7rem">Obrigado!</h2>
     <hr class="rule reveal" style="max-width:360px;margin-left:0;margin-bottom:1rem">
     <div class="reveal" style="border-left:4px solid #1d3557;padding:1rem 1.35rem;background:rgba(29,53,87,.04);border-radius:0 8px 8px 0;max-width:760px">
@@ -316,7 +345,7 @@
   <button class="nav-btn" onclick="changeSlide(-1)">&#8249;</button>
   <div class="slide-dots" id="dots"></div>
   <button class="nav-btn" onclick="changeSlide(1)">&#8250;</button>
-  <span class="slide-counter" id="counter">1 / 11</span>
+  <span class="slide-counter" id="counter">1 / 12</span>
 </div>
 <script src="assets/js/slides.js"></script>
 </body>
