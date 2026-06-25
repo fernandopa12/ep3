@@ -6,17 +6,14 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
   build:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,7 +22,7 @@ jobs:
       - name: Prepare site artifact
         run: |
           mkdir -p _site
-          rsync -av --delete \
+          rsync -av \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='node_modules/' \
